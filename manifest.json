@@ -1,0 +1,16 @@
+{
+  "name": "web-to-notebooklm",
+  "version": "1.0.0",
+  "description": "Full-stack automated web extraction and ingestion to NotebookLM.",
+  "author": "askiteng-cloud",
+  "capabilities": ["web_scraping", "semantic_extraction", "notebook_ingestion"],
+  "dependencies": ["curl", "fabric-ai"],
+  "commands": {
+    "allowFrom": [
+      {
+        "type": "path",
+        "value": "~/.openclaw/skills/web-to-notebooklm/"
+      }
+    ]
+  }
+}
