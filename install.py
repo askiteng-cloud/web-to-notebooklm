@@ -15,7 +15,10 @@ def install():
 
     if missing:
         print(f"⚠️  檢測到缺失依賴: {', '.join(missing)}")
-        print("💡 請先安裝依賴項。")
+        if "fabric-ai" in missing:
+            print("💡 請前往安裝 Fabric-AI: https://github.com/danielmiessler/Fabric")
+        else:
+            print("💡 請先安裝依賴項。")
         sys.exit(1)
 
     # 2. 定義安裝路徑
