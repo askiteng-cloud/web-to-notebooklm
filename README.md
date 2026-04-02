@@ -18,6 +18,28 @@ cd web-to-notebooklm
 python install.py
 ```
 
+## ⚙️ Fabric-AI 配置指引
+
+安裝完依賴後，您需要初始化 Fabric 以連接 AI 模型：
+
+1. **初始化設置**：
+   執行以下指令並跟隨引導輸入您的 API Key（推薦選用 Google Gemini 或 OpenAI）：
+   ```bash
+   fabric-ai --setup
+   ```
+
+2. **推薦配置建議**：
+   - **模型選擇**：
+     - 🚀 **Gemini 2.5 Flash** (推薦)：速度極快、成本低，且具備百萬級上下文，非常適合處理長網頁。
+     - 🧠 **GPT-4o / Claude 3.5 Sonnet**：如果您追求更極致的語義分析深度。
+   - **默認模式**：本技能強制使用 `extract_wisdom` 模式，這是 Fabric 最強大的知識萃取 Pattern。
+
+3. **常用指令檢測**：
+   配置完成後，可以執行此指令驗證是否成功：
+   ```bash
+   fabric-ai --list-patterns
+   ```
+
 ## 📖 使用範例
 對著您的 Gemini CLI 或 OpenClaw 客戶端（如 Telegram）輸入：
 - **基礎模式**：`web-to-notebooklm，處理 https://example.com。`
